@@ -1,9 +1,10 @@
 import gradio as gr
 from openai import OpenAI
+import os
 
 # ================== CHANGE THESE TWO LINES ONLY ==================
 client = OpenAI(
-    api_key="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",   # ← PASTE YOUR GROQ KEY HERE
+    api_key=os.getenv("GROQ_API_KEY"),   # ← SET YOUR GROQ KEY AS ENVIRONMENT VARIABLE
     base_url="https://api.groq.com/openai/v1"
 )
 
